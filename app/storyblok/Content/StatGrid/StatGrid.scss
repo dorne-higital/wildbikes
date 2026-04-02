@@ -1,0 +1,48 @@
+@mixin stat-grid($component-name: 'stat-grid') {
+    .#{$component-name} {
+        background-color: var(--background-secondary);
+        color: var(--text-primary);
+        padding: 1rem;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 2rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .heading-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .content-container {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            .blok-item {
+                width: calc(50% - 1rem);
+
+                @media screen and (min-width: 768px) {
+                    width: calc(25% - 1rem);
+                }
+            }
+        }
+    }
+}

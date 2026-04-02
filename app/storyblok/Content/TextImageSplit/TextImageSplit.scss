@@ -1,0 +1,99 @@
+@mixin text-image-split($component-name: 'text-image-split') {
+    .#{$component-name} {
+        display: flex;
+        min-height: 20rem;
+        max-height: 30rem;
+        width: 100%;
+
+        &.color-1 {
+            background-color: var(--color-1);
+            color: var(--text-primary);
+        }
+
+        &.color-2 {
+            background-color: var(--color-2);
+            color: var(--text-primary);
+        }
+
+        &.color-3 {
+            background-color: var(--color-light);
+            color: var(--text-dark);
+        }
+
+        &.color-4 {
+            background-color: var(--background-primary);
+            color: var(--text-primary);
+        }
+
+        &.color-5 {
+            background-color: var(--background-secondary);
+            color: var(--text-primary);
+        }
+
+        &.right {
+            flex-direction: row-reverse;
+
+            .image-container {
+                &.slash {
+                    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+                }
+
+                &.angular {
+                    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+                }
+
+                &.curve {
+                    border-radius: 0 10rem 10rem 0;
+                }
+
+                &.rounded {
+                    border-radius: 0 2rem 2rem 0;
+                }
+            }
+        }
+
+        &.left {
+            flex-direction: row;
+
+            .image-container {
+                &.slash {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+                }
+
+                &.angular {
+                    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0% 50%);
+                }
+
+                &.curve {
+                    border-radius: 15rem 0 0 15rem;
+                }
+
+                &.rounded {
+                    border-radius: 2rem 0 0 2rem;
+                }
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            justify-content: center;
+            padding: 4rem;
+            width: 50%;
+        }
+
+        .image-container {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            position: relative;
+            width: 50%;
+
+            .image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+@mixin ride-tabs($component-name: 'ride-tabs') {
+    .#{$component-name} {
+        background-color: var(--background-primary);
+        display: flex;
+        gap: 2rem;
+        padding: 2rem .5rem;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            @media screen and (min-width: 768px) {
+                gap: 2rem;
+            }
+        }
+
+        .tabs {
+            width: 100%;
+        }
+
+        .tabs-track {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 28px;
+            padding: .25rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 4px 20px rgba(0, 0, 0, 0.1);
+
+            @media screen and (min-width: 768px) {
+                flex-wrap: nowrap; // ✅ back to single row
+                gap: 0;
+                border-radius: 999px;
+            }
+        }
+
+        .tabs-slider {
+            position: absolute;
+            top: 6px;
+            left: 0;
+            height: calc(100% - 12px);
+            border-radius: 999px;
+            z-index: 0;
+
+            /* Slightly stronger glass */
+            background: color-mix(in srgb, var(--color-1) 70%, transparent);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            /* Glow + depth */
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        /* Buttons */
+        .tabs-track button {
+            position: relative;
+            z-index: 1;
+            flex: 1 1 auto;
+            padding: 0.8rem 1.2rem;
+            border: none;
+            background: transparent;
+            color: var(--text-primary);
+            border-radius: 999px;
+            cursor: pointer;
+            margin-bottom: 0;
+
+            transition: all 0.2s ease;
+
+            /* subtle inactive fade */
+            opacity: 0.7;
+            min-width: calc(33% - 0.5rem);
+
+            @media screen and (min-width: 768px) {
+                flex: 1;
+                min-width: unset;
+                padding: 0.8rem 1.2rem;
+            }
+
+            &.active {
+                opacity: 1;
+
+                @media screen and (max-width: 767px) {
+                    background: color-mix(in srgb, var(--color-1) 70%, transparent);
+                }
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

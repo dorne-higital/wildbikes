@@ -1,0 +1,16 @@
+@mixin ride-stat($component-name: 'ride-stat') {
+    .#{$component-name} {
+        align-items: center;
+        background-color: var(--background-secondary);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .5rem 1rem;
+
+        .value {
+            color: var(--color-1);
+        }
+    }
+}

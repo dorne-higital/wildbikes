@@ -1,0 +1,91 @@
+// ...existing code...
+@use './variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$hero-size: 4rem;
+$h1-size: 3.5rem;
+$h2-size: 2.75rem;
+$h3-size: 2.125rem;
+$h4-size: 1.5rem;
+$h5-size: 1rem;
+$h6-size: 0.85rem;
+
+$body-size: 1rem;
+
+html {
+	font-family: "Montserrat", sans-serif;
+	font-size: $body-size;
+	color: var(--color-text);
+	background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Funnel Sans", sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	margin-bottom: 0.25rem;
+}
+
+.hero {
+	font-size: $hero-size;
+
+	@media screen and (max-width: 768px) {
+		font-size: $h1-size;
+	}
+}
+
+h1 {
+	font-size: $h1-size;
+
+	@media screen and (max-width: 768px) {
+		font-size: $h2-size;
+	}
+}
+
+h2 {
+	font-size: $h2-size;
+
+	@media screen and (max-width: 768px) {
+		font-size: $h3-size;
+	}
+}
+
+h3 {
+	font-size: $h3-size;
+
+	@media screen and (max-width: 768px) {
+		font-size: $h4-size;
+	}
+}
+
+h4 {
+	font-size: $h4-size;
+
+	@media screen and (max-width: 768px) {
+		font-size: $h5-size;
+	}
+}
+
+h5 {
+	font-size: $h5-size;
+
+	@media screen and (max-width: 768px) {
+		font-size: $h6-size;
+	}
+}
+
+h6 {
+	font-size: $h6-size;
+}
+
+.label {
+	font-size: $h6-size;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+}

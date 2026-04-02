@@ -1,0 +1,6 @@
+@mixin wysiwyg($component-name: 'wysiwyg') {
+    .#{$component-name} {
+        margin: 0 auto;
+        position: relative;
+    }
+}

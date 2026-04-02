@@ -1,0 +1,98 @@
+@mixin page-hero($component-name: 'page-hero') {
+    .#{$component-name} {
+        background-color: var(--background-primary);
+        display: flex;
+        min-height: 20rem;
+        max-height: 30rem;
+        width: 100%;
+
+        &.right {
+            flex-direction: row-reverse;
+
+            .image-container {
+                &.slash {
+                    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+                }
+
+                &.angular {
+                    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+                }
+
+                &.curve {
+                    border-radius: 0 10rem 10rem 0;
+                }
+
+                &.rounded {
+                    border-radius: 0 2rem 2rem 0;
+                }
+
+                &.dual-slash {
+                    clip-path: polygon(10% 0, // top-left shifted right
+                            100% 0,
+                            90% 100%, // bottom-right shifted left
+                            0% 100%);
+                }
+            }
+        }
+
+        &.left {
+            flex-direction: row;
+
+            .image-container {
+                &.slash {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+                }
+
+                &.angular {
+                    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0% 50%);
+                }
+
+                &.curve {
+                    border-radius: 15rem 0 0 15rem;
+                }
+
+                &.rounded {
+                    border-radius: 2rem 0 0 2rem;
+                }
+            }
+        }
+
+        &.slim {
+            min-height: 13rem;
+            max-height: 16rem;
+
+            .content-container {
+                padding: 2rem 4rem;
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            justify-content: center;
+            padding: 4rem;
+            width: 50%;
+
+            .heading {
+                color: var(--text-primary);
+            }
+
+            .subheading {
+                color: var(--text-secondary);
+            }
+        }
+
+        .image-container {
+            overflow: hidden;
+            position: relative;
+            width: 50%;
+
+            .image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

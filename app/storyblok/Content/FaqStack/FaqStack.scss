@@ -1,0 +1,54 @@
+@mixin faq-stack($component-name: 'faq-stack') {
+    .#{$component-name} {
+        background-color: var(--background-primary);
+        padding: 2rem 1rem;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+
+            &:focus,
+            &:focus-visible {
+                outline: 2px solid var(--color-1);
+            }
+        }
+
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+
+            .tag {
+                padding: 0.4rem 0.8rem;
+                border-radius: var(--border-radius-sm);
+                border: 1px solid #ccc;
+                cursor: pointer;
+                font-size: .75rem;
+                font-weight: 500;
+
+                &.active {
+                    background: var(--color-1);
+                    color: white;
+                    border-color: var(--color-1);
+                }
+            }
+        }
+    }
+}

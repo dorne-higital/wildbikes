@@ -1,0 +1,16 @@
+@mixin usp-tile($component-name: 'usp-tile') {
+    .#{$component-name} {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-start;
+        padding: .5rem;
+
+        .icon {
+            color: var(--color-1);
+            font-size: 2rem;
+            padding: .25rem;
+        }
+    }
+}

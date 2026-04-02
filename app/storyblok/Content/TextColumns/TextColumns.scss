@@ -1,0 +1,45 @@
+@mixin text-columns($component-name: 'text-columns') {
+    .#{$component-name} {
+        background-color: var(--background-secondary);
+        color: var(--text-primary);
+        padding: 2rem 1rem;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .heading-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            .blok-item {
+                padding: 1rem;
+            }
+
+            .border-color {
+                border-left: 3px solid var(--color-1);
+            }
+        }
+    }
+}

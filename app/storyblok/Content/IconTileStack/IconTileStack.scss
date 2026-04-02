@@ -1,0 +1,47 @@
+@mixin icon-tile-stack($component-name: 'icon-tile-stack') {
+    .#{$component-name} {
+        background-color: var(--background-secondary);
+        padding: 1rem;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
+
+        .heading-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .content-container {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .blok-item {
+                min-width: calc(50% - 1rem);
+
+                @media screen and (min-width: 768px) {
+                    min-width: calc(33% - 2rem);
+                    max-width: calc(33% - 2rem);
+                }
+            }
+
+            .border-color {
+                border-left: 3px solid var(--color-1);
+            }
+        }
+    }
+}

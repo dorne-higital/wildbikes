@@ -1,0 +1,75 @@
+@mixin text-image-overlay($component-name: 'text-image-overlay') {
+    .#{$component-name} {
+        aspect-ratio: 1/2;
+        background-color: var(--background-secondary);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            aspect-ratio: 21/9;
+        }
+
+        .image-wrapper {
+            aspect-ratio: 1/2;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+
+            @media screen and (min-width: 768px) {
+                aspect-ratio: 21/9;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            &.left {
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: auto;
+                    margin-top: auto;
+                }
+            }
+
+            &.right {
+                align-items: flex-end;
+                justify-content: flex-end;
+                margin: auto 0 0.5rem 0;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: auto;
+                    margin-top: auto;
+                }
+            }
+        }
+
+        .content-card {
+            background-color: color-mix(in srgb, var(--background-secondary) 80%, transparent);
+            backdrop-filter: blur(8px);
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            margin: 0.5rem 0 auto 0;
+            padding: 1.5rem;
+
+            @media screen and (min-width: 768px) {
+                margin: auto 0;
+                max-width: 460px;
+            }
+        }
+    }
+}

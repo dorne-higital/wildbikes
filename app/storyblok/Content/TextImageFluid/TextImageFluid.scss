@@ -1,0 +1,93 @@
+@mixin text-image-fluid($component-name: 'text-image-fluid') {
+    .#{$component-name} {
+        background-color: var(--background-secondary);
+        display: flex;
+        // min-height: 20rem;
+        // max-height: 30rem;
+        padding: 2rem 1rem;
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
+
+        .content {
+            background-color: var(--background-primary);
+            border-radius: var(--border-radius);
+            display: flex;
+            padding: 1rem;
+
+            @media screen and (min-width: 768px) {
+                padding: 2rem;
+            }
+
+            &.right {
+                flex-direction: column-reverse;
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            &.left {
+                flex-direction: column;
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                }
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            justify-content: center;
+            padding: 1rem;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                padding: 2rem;
+                width: 50%;
+            }
+
+            @media screen and (min-width: 1280px) {
+                padding: 4rem;
+            }
+
+            .heading {
+                color: var(--text-primary);
+            }
+
+            .subheading,
+            .description {
+                color: var(--text-secondary);
+            }
+        }
+
+        .image-container {
+            aspect-ratio: 3/2;
+            border-radius: var(--border-radius-sm);
+            box-shadow: var(--shadow);
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                aspect-ratio: 16/9;
+                width: 50%;
+            }
+
+            .image {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

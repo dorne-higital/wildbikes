@@ -1,0 +1,80 @@
+@mixin inline-gallery($component-name: 'inline-gallery') {
+    .#{$component-name} {
+        padding: 1rem;
+        position: relative;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
+
+        &.color-1 {
+            background-color: var(--color-1);
+            color: var(--text-primary);
+        }
+
+        &.color-2 {
+            background-color: var(--color-2);
+            color: var(--text-primary);
+        }
+
+        &.color-3 {
+            background-color: var(--color-3);
+            color: var(--text-dark);
+        }
+
+        &.color-4 {
+            background-color: var(--background-primary);
+            color: var(--text-primary);
+        }
+
+        &.color-5 {
+            background-color: var(--background-secondary);
+            color: var(--text-primary);
+        }
+
+        .heading-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            &.inline {
+                gap: 1rem;
+            }
+
+            &.staggered {
+                gap: 1rem;
+
+                .blok-item {
+                    &:nth-child(2n) {
+                        margin-top: 4rem;
+                    }
+
+                    &:nth-child(3n) {
+                        margin-top: -1rem;
+                    }
+
+                    &:nth-child(4n) {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+            .border-color {
+                border-left: 3px solid var(--color-1);
+            }
+        }
+    }
+}

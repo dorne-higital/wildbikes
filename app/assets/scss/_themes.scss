@@ -1,0 +1,151 @@
+// ...existing code...
+@use './variables' as v;
+
+/* LIGHT THEME (default) */
+:root {
+	/* backgrounds */
+	--background-primary: #F8FAFC;
+	--background-secondary: #F1F5F9;
+	--background-tertiary: #E2E8F0;
+
+	/* surfaces */
+	--surface: #FFFFFF;
+	--surface-muted: #F9FAFB;
+	--surface-hover: #F3F4F6;
+
+	/* text */
+	--text-primary: #1D1F21;
+	--text-secondary: #4B5563;
+	--text-muted: #9CA3AF;
+	--text-inverse: #FFFFFF;
+
+	/* brand */
+	--color-1: #e27609;
+	/* anchor */
+	--color-1-light: #f59e0b;
+	--color-1-dark: #c2410c;
+
+	/* accent palette */
+	--accent-blue: #3b82f6;
+	--accent-purple: #8b5cf6;
+	--accent-pink: #ec4899;
+	--accent-teal: #14b8a6;
+	--accent-cyan: #06b6d4;
+
+	/* semantic */
+	--success: #22c55e;
+	--success-bg: #dcfce7;
+
+	--error: #ef4444;
+	--error-bg: #fee2e2;
+
+	--warning: #f59e0b;
+	--warning-bg: #fef3c7;
+
+	--info: #0ea5e9;
+	--info-bg: #e0f2fe;
+
+	/* links */
+	--link: #2563eb;
+	--link-hover: #1d4ed8;
+
+	/* borders */
+	--border-color: #E5E7EB;
+	--border-color-strong: #D1D5DB;
+
+	/* shadows */
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+	--shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+	--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+	/* radius */
+	--border-radius-sm: 0.5rem;
+	--border-radius: 1rem;
+
+	/* button */
+	--button-decoration: capitalize;
+	--button-font-weight: 400;
+	--button-font-size: 1rem;
+	--button-font-family: "Funnel Sans", sans-serif;
+	--button-border-radius: 0;
+
+	/* nav */
+	--nav-decoration: capitalize;
+	--nav-font-weight: 400;
+	--nav-font-size: 1rem;
+	--nav-font-family: "Funnel Sans", sans-serif;
+}
+
+[data-theme="dark"] {
+	/* backgrounds */
+	--background-primary: #0F172A;
+	--background-secondary: #1E293B;
+	--background-tertiary: #334155;
+
+	/* surfaces */
+	--surface: #1E293B;
+	--surface-muted: #334155;
+	--surface-hover: #475569;
+
+	/* text */
+	--text-primary: #F9FAFB;
+	--text-secondary: #CBD5E1;
+	--text-muted: #94A3B8;
+	--text-inverse: #0F172A;
+
+	/* brand */
+	--color-1: #e27609;
+	/* still sacred */
+	--color-1-light: #fb923c;
+	--color-1-dark: #c2410c;
+
+	/* accent palette (slightly brighter for contrast) */
+	--accent-blue: #60a5fa;
+	--accent-purple: #a78bfa;
+	--accent-pink: #f472b6;
+	--accent-teal: #2dd4bf;
+	--accent-cyan: #22d3ee;
+
+	/* semantic */
+	--success: #4ade80;
+	--success-bg: rgba(34, 197, 94, 0.15);
+
+	--error: #f87171;
+	--error-bg: rgba(239, 68, 68, 0.15);
+
+	--warning: #fbbf24;
+	--warning-bg: rgba(245, 158, 11, 0.15);
+
+	--info: #38bdf8;
+	--info-bg: rgba(14, 165, 233, 0.15);
+
+	/* links */
+	--link: #93c5fd;
+	--link-hover: #60a5fa;
+
+	/* borders */
+	--border-color: #334155;
+	--border-color-strong: #475569;
+
+	/* shadows (darker + softer spread) */
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+	--shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+	--shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+	/* radius */
+	--border-radius-sm: 0.25rem;
+	--border-radius: 1rem;
+
+	/* button */
+	--button-decoration: capitalize;
+	--button-font-weight: 400;
+	--button-font-size: 1rem;
+	--button-font-family: "Funnel Sans", sans-serif;
+	--button-border-radius: 0;
+
+	/* nav */
+	--nav-decoration: capitalize;
+	--nav-font-weight: 400;
+	--nav-font-size: 1rem;
+	--nav-font-family: "Funnel Sans", sans-serif;
+}

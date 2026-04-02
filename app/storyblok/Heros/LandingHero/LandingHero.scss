@@ -1,0 +1,56 @@
+@mixin landing-hero($component-name: 'landing-hero') {
+	.#{$component-name} {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		position: relative;
+		height: 100vh;
+
+		.media-wrapper {
+			inset: 0;
+			position: absolute;
+			z-index: -1;
+
+			.media-video,
+			.media-image {
+				height: 100%;
+				object-fit: cover;
+				width: 100%;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 0;
+				opacity: 0.9;
+				mix-blend-mode: multiply;
+			}
+		}
+
+		.hero-content {
+			position: relative;
+			z-index: 2;
+
+			.hero-inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1rem;
+				color: var(--text-primary);
+
+				.cta-row {
+					display: flex;
+					gap: 1rem;
+					flex-wrap: wrap;
+					width: 400px;
+
+					.button {
+						flex: 1;
+					}
+				}
+			}
+		}
+	}
+}

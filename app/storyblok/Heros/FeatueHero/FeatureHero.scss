@@ -1,0 +1,53 @@
+@mixin feature-hero($component-name: 'feature-hero') {
+    .#{$component-name} {
+        background-color: var(--background-primary);
+        display: flex;
+        padding: 4rem;
+        width: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.4); // 👈 adjust strength here
+            z-index: 0;
+        }
+
+        &.slash {
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+
+        &.angular {
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        }
+
+        &.curve {
+            border-radius: 0 0 10rem 10rem;
+        }
+
+        &.rounded {
+            border-radius: 0 0 4rem 4rem;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            justify-content: center;
+            padding: 4rem;
+            text-align: center;
+            width: 100%;
+            z-index: 2;
+
+            .heading {
+                color: var(--text-primary);
+            }
+
+            .subheading,
+            .label {
+                color: var(--text-secondary);
+            }
+        }
+    }
+}
