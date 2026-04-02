@@ -5,11 +5,9 @@
             componentName,
         ]"
     >
-        <Fa
-            v-if="blok.icon?.icon"
-            :icon="['fas', blok.icon.icon.replace('fa-', '')]"
-            class="icon"
-        />
+        <span class="icon">
+            &#10004;
+        </span>
 
         <div class="content">
             <h5

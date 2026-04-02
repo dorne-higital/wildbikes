@@ -2,7 +2,7 @@
     .#{$component-name} {
         background-color: var(--background-secondary);
         color: var(--text-primary);
-        padding: 1rem;
+        padding: 2rem 1rem;
         position: relative;
 
         @media screen and (min-width: 768px) {
