@@ -2,8 +2,16 @@
     .#{$component-name} {
         background-color: var(--background-primary);
         display: flex;
-        padding: 4rem;
+        padding: 4rem 1rem;
         width: 100%;
+
+        @media screen and (min-width: 768px) {
+            padding: 2rem;
+        }
+
+        @media screen and (min-width: 1280px) {
+            padding: 4rem;
+        }
 
         &::before {
             content: "";
@@ -35,7 +43,7 @@
             flex-direction: column;
             gap: .5rem;
             justify-content: center;
-            padding: 4rem;
+            padding: 4rem 1rem;
             text-align: center;
             width: 100%;
             z-index: 2;
