@@ -3,8 +3,6 @@
 		v-if="story" 
 		:blok="story.content" 
 	/>
-
-	<pre>{{story.content}}</pre>
 </template>
 
 <script setup lang="ts">
