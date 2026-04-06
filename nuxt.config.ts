@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2026-01-13",
   devtools: { enabled: false },
-  modules: ["@storyblok/nuxt"],
+  modules: ["@storyblok/nuxt", "@nuxt/icon"],
 
   storyblok: {
     accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,

@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@antfu/install-pkg@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@antfu/install-pkg/-/install-pkg-1.1.0.tgz#78fa036be1a6081b5a77a5cf59f50c7752b6ba26"
+  integrity sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==
+  dependencies:
+    package-manager-detector "^1.3.0"
+    tinyexec "^1.0.1"
+
 "@babel/code-frame@^7.27.1", "@babel/code-frame@^7.28.6", "@babel/code-frame@^7.29.0":
   version "7.29.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.29.0.tgz#7cd7a59f15b3cc0dcd803038f7792712a7d0b15c"
@@ -423,6 +431,41 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.27.3.tgz#0eaf705c941a218a43dba8e09f1df1d6cd2f1f17"
   integrity sha512-4uJGhsxuptu3OcpVAzli+/gWusVGwZZHTlS63hh++ehExkVT8SgiEf7/uC/PclrPPkLhZqGgCTjd0VWLo6xMqA==
 
+"@iconify-json/uil@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@iconify-json/uil/-/uil-1.2.3.tgz#d455746fe32491fa46a884b6d47e4b7a3cc9c76f"
+  integrity sha512-if91+UBhDQc6glPsIaXecGIcXnbQZfEO4Gdv89TV2xQ+V5e9GWbY5rNl2fsKZd8COsRQ5lRQAKimVQVL0CZZVg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/collections@^1.0.641":
+  version "1.0.669"
+  resolved "https://registry.yarnpkg.com/@iconify/collections/-/collections-1.0.669.tgz#7df3d18cac946226e3c4d6346b79db92e3775e83"
+  integrity sha512-oy/ztmcRvljkx4wV/fQ5OmpHyjEstntRjgexMajmlWMCy3Q54C3ISHWfB6p5sTH7eQPo8EWre9TCnldOBqcuxg==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/types@*", "@iconify/types@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/types/-/types-2.0.0.tgz#ab0e9ea681d6c8a1214f30cd741fe3a20cc57f57"
+  integrity sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==
+
+"@iconify/utils@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/utils/-/utils-3.1.0.tgz#fb41882915f97fee6f91a2fbb8263e8772ca0438"
+  integrity sha512-Zlzem1ZXhI1iHeeERabLNzBHdOa4VhQbqAcOQaMKuTuyZCpwKbC2R4Dd0Zo3g9EAc+Y4fiarO8HIHRAth7+skw==
+  dependencies:
+    "@antfu/install-pkg" "^1.1.0"
+    "@iconify/types" "^2.0.0"
+    mlly "^1.8.0"
+
+"@iconify/vue@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@iconify/vue/-/vue-5.0.0.tgz#c47e4b3a225a64bbf28dce924934f23e54b061a4"
+  integrity sha512-C+KuEWIF5nSBrobFJhT//JS87OZ++QDORB6f2q2Wm6fl2mueSTpFBeBsveK0KW9hWiZ4mNiPjsh6Zs4jjdROSg==
+  dependencies:
+    "@iconify/types" "^2.0.0"
+
 "@ioredis/commands@1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@ioredis/commands/-/commands-1.5.0.tgz#3dddcea446a4b1dc177d0743a1e07ff50691652a"
@@ -591,6 +634,14 @@
     "@nuxt/kit" "^4.3.1"
     execa "^8.0.1"
 
+"@nuxt/devtools-kit@^3.1.1":
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/@nuxt/devtools-kit/-/devtools-kit-3.2.4.tgz#496004ea0f4c1647c633ffa9ece874b8ff146a4c"
+  integrity sha512-Yxy2Xgmq5hf3dQy983V0xh0OJV2mYwRZz9eVIGc3EaribdFGPDNGMMbYqX9qCty3Pbxn/bCF3J0UyPaNlHVayQ==
+  dependencies:
+    "@nuxt/kit" "^4.4.2"
+    execa "^8.0.1"
+
 "@nuxt/devtools-wizard@3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@nuxt/devtools-wizard/-/devtools-wizard-3.2.2.tgz#46c33aa6bdd01db6212c0ed57cc06f34f5e552e0"
@@ -643,6 +694,26 @@
     which "^5.0.0"
     ws "^8.19.0"
 
+"@nuxt/icon@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/icon/-/icon-2.2.1.tgz#0155537f34896ea552fe76e2d5bf7555d55f397f"
+  integrity sha512-GI840yYGuvHI0BGDQ63d6rAxGzG96jQcWrnaWIQKlyQo/7sx9PjXkSHckXUXyX1MCr9zY6U25Td6OatfY6Hklw==
+  dependencies:
+    "@iconify/collections" "^1.0.641"
+    "@iconify/types" "^2.0.0"
+    "@iconify/utils" "^3.1.0"
+    "@iconify/vue" "^5.0.0"
+    "@nuxt/devtools-kit" "^3.1.1"
+    "@nuxt/kit" "^4.2.2"
+    consola "^3.4.2"
+    local-pkg "^1.1.2"
+    mlly "^1.8.0"
+    ohash "^2.0.11"
+    pathe "^2.0.3"
+    picomatch "^4.0.3"
+    std-env "^3.10.0"
+    tinyglobby "^0.2.15"
+
 "@nuxt/kit@4.3.1", "@nuxt/kit@^4.2.2", "@nuxt/kit@^4.3.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-4.3.1.tgz#e65f49b11a2ecb56c32a7173b3826f0eeee2b682"
@@ -658,6 +729,32 @@
     jiti "^2.6.1"
     klona "^2.0.6"
     mlly "^1.8.0"
+    ohash "^2.0.11"
+    pathe "^2.0.3"
+    pkg-types "^2.3.0"
+    rc9 "^3.0.0"
+    scule "^1.3.0"
+    semver "^7.7.4"
+    tinyglobby "^0.2.15"
+    ufo "^1.6.3"
+    unctx "^2.5.0"
+    untyped "^2.0.0"
+
+"@nuxt/kit@^4.4.2":
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-4.4.2.tgz#272e5a80b4879d6612ab0bee86159e4ad6171e72"
+  integrity sha512-5+IPRNX2CjkBhuWUwz0hBuLqiaJPRoKzQ+SvcdrQDbAyE+VDeFt74VpSFr5/R0ujrK4b+XnSHUJWdS72w6hsog==
+  dependencies:
+    c12 "^3.3.3"
+    consola "^3.4.2"
+    defu "^6.1.4"
+    destr "^2.0.5"
+    errx "^0.1.0"
+    exsolve "^1.0.8"
+    ignore "^7.0.5"
+    jiti "^2.6.1"
+    klona "^2.0.6"
+    mlly "^1.8.1"
     ohash "^2.0.11"
     pathe "^2.0.3"
     pkg-types "^2.3.0"
@@ -3458,6 +3555,16 @@ mlly@^1.7.1, mlly@^1.7.2, mlly@^1.7.4, mlly@^1.8.0:
     pkg-types "^1.3.1"
     ufo "^1.6.1"
 
+mlly@^1.8.1:
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/mlly/-/mlly-1.8.2.tgz#e7f7919a82d13b174405613117249a3f449d78bb"
+  integrity sha512-d+ObxMQFmbt10sretNDytwt85VrbkhhUA/JBGm1MPaWJ65Cl4wOgLaB1NYvJSZ0Ef03MMEU/0xpPMXUIQ29UfA==
+  dependencies:
+    acorn "^8.16.0"
+    pathe "^2.0.3"
+    pkg-types "^1.3.1"
+    ufo "^1.6.3"
+
 mocked-exports@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/mocked-exports/-/mocked-exports-0.1.1.tgz#6916efea9a9dd0f4abd6a0a72526f56a76c966ea"
@@ -3869,6 +3976,11 @@ package-json-from-dist@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz#4f1471a010827a86f94cfd9b0727e36d267de505"
   integrity sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==
+
+package-manager-detector@^1.3.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/package-manager-detector/-/package-manager-detector-1.6.0.tgz#70d0cf0aa02c877eeaf66c4d984ede0be9130734"
+  integrity sha512-61A5ThoTiDG/C8s8UMZwSorAGwMJ0ERVGj2OjoW5pAalsNOg15+iQiPzrLJ4jhZ1HJzmC2PIHT2oEiH3R5fzNA==
 
 parseurl@^1.3.3:
   version "1.3.3"
@@ -4925,6 +5037,11 @@ tiny-invariant@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.3.3.tgz#46680b7a873a0d5d10005995eb90a70d74d60127"
   integrity sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==
+
+tinyexec@^1.0.1:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/tinyexec/-/tinyexec-1.0.4.tgz#6c60864fe1d01331b2f17c6890f535d7e5385408"
+  integrity sha512-u9r3uZC0bdpGOXtlxUIdwf9pkmvhqJdrVCH9fapQtgy/OeTTMZ1nqH7agtvEfmGui6e1XxjcdrlxvxJvc3sMqw==
 
 tinyexec@^1.0.2:
   version "1.0.2"

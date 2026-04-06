@@ -3,8 +3,17 @@
 		display: flex;
 		align-items: center;
 		overflow: hidden;
+		padding: 0 .5rem;
 		position: relative;
 		height: 100vh;
+
+		@media screen and (min-width: 768px) {
+			padding: 0 2rem;
+		}
+
+		@media screen and (min-width: 1280px) {
+			padding: 0;
+		}
 
 		.media-wrapper {
 			inset: 0;
@@ -44,10 +53,15 @@
 					display: flex;
 					gap: 1rem;
 					flex-wrap: wrap;
-					width: 400px;
+					width: 100%;
+
+					@media screen and (min-width: 768px) {
+						max-width: 400px;
+					}
 
 					.button {
 						flex: 1;
+						white-space: nowrap;
 					}
 				}
 			}

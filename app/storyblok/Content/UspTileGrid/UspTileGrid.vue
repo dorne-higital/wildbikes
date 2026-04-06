@@ -18,12 +18,12 @@
                     {{ blok.heading }}
                 </h2>
                 
-                <h4
+                <h3
                     v-if="blok.subheading"
                     class="subheading"
                 >
                     {{ blok.subheading }}
-                </h4>
+                </h3>
             </div>
 
             <div class="content-container">

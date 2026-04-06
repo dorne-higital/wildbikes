@@ -11,15 +11,16 @@
                 :href="blok?.file?.url" 
                 target="_blank"
             >
-                <Fa
+                <span 
                     v-if="blok.icon?.icon"
-                    :icon="[blok.icon.type, blok.icon.icon.replace('fa-', '')]"
                     class="icon"
-                />
+                >
+                    <Icon name="uil:upload" size="2rem" />
+                </span>
 
                 <h5
                     v-if="blok.title"
-                    class="title"
+                    class="title label eyebrow"
                 >
                     {{ blok.title }}
                 </h5>

@@ -5,8 +5,12 @@
             componentName,
         ]"
     >
-        <span class="icon">
+        <!-- <span class="icon">
             &#10004;
+        </span> -->
+
+        <span class="icon">
+            <Icon name="uil:check-circle" size="2rem" />
         </span>
 
         <div class="content">
