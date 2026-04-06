@@ -42,7 +42,7 @@
                 0 4px 20px rgba(0, 0, 0, 0.1);
 
             @media screen and (min-width: 768px) {
-                flex-wrap: nowrap; // ✅ back to single row
+                flex-wrap: nowrap;
                 gap: 0;
                 border-radius: 999px;
             }
@@ -55,17 +55,12 @@
             height: calc(100% - 12px);
             border-radius: 999px;
             z-index: 0;
-
-            /* Slightly stronger glass */
             background: color-mix(in srgb, var(--color-1) 70%, transparent);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-
-            /* Glow + depth */
             box-shadow:
                 0 4px 12px rgba(0, 0, 0, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
-
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             display: none;
 
@@ -86,10 +81,7 @@
             border-radius: 999px;
             cursor: pointer;
             margin-bottom: 0;
-
             transition: all 0.2s ease;
-
-            /* subtle inactive fade */
             opacity: 0.7;
             min-width: calc(33% - 0.5rem);
 
