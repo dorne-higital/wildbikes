@@ -12,7 +12,7 @@
                 target="_blank"
             >
                 <span 
-                    v-if="blok.icon?.icon"
+                    v-if="blok.title || blok.description"
                     class="icon"
                 >
                     <Icon name="uil:upload" size="2rem" />
