@@ -1,7 +1,7 @@
 @mixin stat($component-name: 'stat') {
     .#{$component-name} {
         align-items: center;
-        border: 1px solid var(--background-primary);
+        border: 1px solid var(--background-secondary);
         border-radius: var(--border-radius-sm);
         display: flex;
         flex-direction: column;

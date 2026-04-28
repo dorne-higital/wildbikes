@@ -1,5 +1,6 @@
 @mixin inline-gallery($component-name: 'inline-gallery') {
     .#{$component-name} {
+        background-color: var(--background-primary);
         padding: 1rem;
         position: relative;
 

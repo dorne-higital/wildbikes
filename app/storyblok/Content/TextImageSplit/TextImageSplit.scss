@@ -1,5 +1,6 @@
 @mixin text-image-split($component-name: 'text-image-split') {
     .#{$component-name} {
+        background-color: var(--background-primary);
         display: flex;
         min-height: 20rem;
         max-height: 30rem;

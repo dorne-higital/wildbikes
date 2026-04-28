@@ -1,6 +1,6 @@
 @mixin stat-grid($component-name: 'stat-grid') {
     .#{$component-name} {
-        background-color: var(--background-secondary);
+        background-color: var(--background-primary);
         color: var(--text-primary);
         padding: 1rem;
         position: relative;

@@ -1,6 +1,6 @@
 @mixin text-columns($component-name: 'text-columns') {
     .#{$component-name} {
-        background-color: var(--background-secondary);
+        background-color: var(--background-primary);
         color: var(--text-primary);
         padding: 2rem 1rem;
         position: relative;

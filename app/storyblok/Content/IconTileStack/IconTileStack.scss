@@ -1,6 +1,6 @@
 @mixin icon-tile-stack($component-name: 'icon-tile-stack') {
     .#{$component-name} {
-        background-color: var(--background-secondary);
+        background-color: var(--background-primary);
         padding: 1rem;
         position: relative;
 

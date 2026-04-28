@@ -1,7 +1,7 @@
 @mixin text-image-overlay($component-name: 'text-image-overlay') {
     .#{$component-name} {
         aspect-ratio: 1/2;
-        background-color: var(--background-secondary);
+        background-color: var(--background-primary);
         display: flex;
         justify-content: center;
         overflow: hidden;

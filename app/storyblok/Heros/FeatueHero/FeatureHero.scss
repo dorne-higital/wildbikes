@@ -1,6 +1,6 @@
 @mixin feature-hero($component-name: 'feature-hero') {
     .#{$component-name} {
-        background-color: var(--background-primary);
+        background-color: var(--background-secondary);
         display: flex;
         padding: 4rem 1rem;
         width: 100%;
@@ -18,7 +18,7 @@
             position: absolute;
             inset: 0;
 
-            background: rgba(0, 0, 0, 0.4); // 👈 adjust strength here
+            background: rgba(0, 0, 0, 0.4);
             z-index: 0;
         }
 
