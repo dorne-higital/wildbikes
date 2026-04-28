@@ -41,39 +41,50 @@
             width: 100%;
         }
 
-        .content-container {
+        .carousel-wrapper {
+            position: relative;
+            padding-bottom: 4rem; // Space for the buttons
+        }
+
+        .image {
+            border-radius: var(--border-radius-sm);
+            overflow: hidden;
+        }
+
+        .clickable {
+            transition: transform 0.3s ease;
+            border-radius: var(--border-radius-sm);
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .nav-controls {
+            position: absolute;
+            bottom: 0;
+            right: 0;
             display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            gap: .5rem;
+            z-index: 10;
 
-            @media screen and (min-width: 768px) {
-                flex-direction: row;
-            }
+            .icon {
+                background-color: var(--background-primary);
+                width: 4rem;
+                height: 2rem;
+                border: 1px solid var(--color-1);
+                border-radius: var(--border-radius-sm);
+                cursor: pointer;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s;
+                color: var(--text-secondary);
 
-            &.inline {
-                gap: 1rem;
-            }
-
-            &.staggered {
-                gap: 1rem;
-
-                .blok-item {
-                    &:nth-child(2n) {
-                        margin-top: 4rem;
-                    }
-
-                    &:nth-child(3n) {
-                        margin-top: -1rem;
-                    }
-
-                    &:nth-child(4n) {
-                        margin-top: 2rem;
-                    }
+                &:hover {
+                    background: var(--color-1);
                 }
-            }
-
-            .border-color {
-                border-left: 3px solid var(--color-1);
             }
         }
     }

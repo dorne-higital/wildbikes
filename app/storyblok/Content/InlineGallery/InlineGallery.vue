@@ -1,43 +1,76 @@
 <template>
-    <section
-        v-editable="blok"
-        :class="[
-            componentName,
-            dynamicClass
-        ]"
+    <section 
+        v-editable="blok" 
+        :class="[componentName, dynamicClass]"
     >
         <div class="sw">
-            <div
+            <div 
                 v-if="blok.heading || blok.subheading" 
-                class="heading-container"
+                class="header-flex"
             >
-                <h2
-                    v-if="blok.heading"
-                    class="heading"
-                >
-                    {{ blok.heading }}
-                </h2>
-                
-                <h4
-                    v-if="blok.subheading"
-                    class="subheading"
-                >
-                    {{ blok.subheading }}
-                </h4>
+                <div class="heading-container">
+                    <h2 
+                        v-if="blok.heading" 
+                        class="heading"
+                    >
+                        {{ blok.heading }}
+                    </h2>
+
+                    <h4
+                        v-if="blok.subheading" 
+                        class="subheading"
+                    >
+                        {{ blok.subheading }}
+                    </h4>
+                </div>
             </div>
 
-            <div    
-                :class="blok.layout"
-                class="content-container"
-            >
-                <StoryblokComponent
-                    v-for="currentBlok in blok.image"
-                    :key="currentBlok._uid"
-                    :blok="currentBlok"
-                    :image-count="ratioClass"
-                    :class="{ 'border-color': blok.showBorder }"
-                    class="blok-item"
-                />
+            <div class="carousel-wrapper">
+                <swiper-container
+                    ref="swiperRef"
+                    :slides-per-view="1"
+                    :space-between="20"
+                    :loop="true"
+                    :navigation="{
+                        nextEl: '.nav-next',
+                        prevEl: '.nav-prev',
+                    }"
+                    :breakpoints="{
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 4 }
+                    }"
+                    class="content-container"
+                >
+                    <swiper-slide
+                        v-for="(currentBlok, index) in blok.image"
+                        :key="currentBlok._uid"
+                        @click="openGallery(index)"
+                        class="image"
+                    >
+                        <StoryblokComponent
+                            :blok="currentBlok"
+                            :image-count="ratioClass"
+                            :class="{ 'border-color': blok.showBorder }"
+                            class="blok-item clickable"
+                            loading="lazy"
+                        />
+                    </swiper-slide>
+                </swiper-container>
+
+            <div class="nav-controls">
+                <span class="nav-prev icon">
+                    <Icon 
+                        name="uil:angle-left" 
+                        size="2rem" 
+                    />
+                </span>
+                <span class="nav-next icon">
+                    <Icon 
+                        name="uil:angle-right" 
+                        size="2rem" 
+                    />
+                </span>
+            </div>
             </div>
         </div>
     </section>
@@ -45,6 +78,8 @@
 
 <script setup lang="ts">
     import { renderRichText } from '@storyblok/vue';
+    import { register } from 'swiper/element/bundle';
+    register(); // Registers Swiper custom elements
 
     const props = withDefaults(
       defineProps<{ blok: any; componentName?: string }>(),
