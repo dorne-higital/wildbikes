@@ -1,0 +1,167 @@
+@mixin form-container($component-name: 'form-container') {
+    .#{$component-name} {
+        padding: 4rem 0;
+
+        .fields-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .field-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &.full {
+                width: 100%;
+            }
+
+            &.half {
+                width: calc(50% - 0.75rem);
+
+                @media (max-width: 640px) {
+                    width: 100%;
+                }
+            }
+
+            label {
+                .required {
+                    color: var(--error);
+                    margin-left: 0.2rem;
+                }
+            }
+        }
+
+        input,
+        textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-actions {
+            margin-top: 2rem;
+        }
+
+        .submit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: var(--color-1);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: var(--button-font-size);
+            font-family: var(--button-font-family);
+            font-weight: var(--button-font-weight);
+            text-transform: var(--button-decoration);
+            border-radius: var(--button-border-radius);
+            transition: background 0.2s ease, opacity 0.2s ease;
+
+            &:hover:not(:disabled) {
+                background: var(--color-1-dark);
+            }
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+
+            .btn-icon {
+                font-size: 1.1em;
+
+                &.spinning {
+                    animation: spin 0.8s linear infinite;
+                }
+            }
+        }
+
+        .form-error {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            padding: 0.875rem 1rem;
+            background: var(--error-bg);
+            border-left: 3px solid var(--error);
+            border-radius: var(--border-radius-sm);
+            color: var(--error);
+            font-size: 0.9rem;
+
+            .feedback-icon {
+                font-size: 1.2rem;
+                flex-shrink: 0;
+            }
+        }
+
+        .success-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 3rem 2rem;
+            gap: 1rem;
+
+            .success-icon-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                background: var(--success-bg);
+                border: 2px solid var(--success);
+
+                .success-icon {
+                    font-size: 2rem;
+                    color: var(--success);
+                }
+            }
+
+            .success-heading {
+                margin: 0;
+                font-size: 1.5rem;
+                color: var(--text-primary);
+            }
+
+            .success-message {
+                margin: 0;
+                color: var(--text-secondary);
+                font-size: 1rem;
+                max-width: 400px;
+            }
+        }
+
+        // Fade transition
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fade-enter-from,
+        .fade-leave-to {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        // Example Theme variation
+        &.Dark {
+            background: #1a1a1a;
+            color: white;
+
+            input {
+                background: #333;
+                border-color: #444;
+                color: white;
+            }
+        }
+
+    }
+}
