@@ -91,7 +91,7 @@ onMounted(() => {
     if (images.value.length > 1) {
         timer = setInterval(() => {
             activeIndex.value = (activeIndex.value + 1) % images.value.length;
-        }, 2500);
+        }, 4500);
     }
 });
 
