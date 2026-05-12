@@ -23,8 +23,79 @@
             }
         }
 
+        // Mobile carousel — hidden on desktop
+        .tabs-carousel {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+
+            .carousel-arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                flex-shrink: 0;
+                border: 1px solid var(--border-color);
+                border-radius: 50%;
+                background: transparent;
+                color: var(--text-primary);
+                cursor: pointer;
+                font-size: 1.4rem;
+                transition: background 0.2s ease, color 0.2s ease;
+
+                &:hover {
+                    background: var(--color-1);
+                    color: #fff;
+                    border-color: var(--color-1);
+                }
+            }
+
+            .carousel-center {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .carousel-label {
+                font-size: 1rem;
+                font-weight: 600;
+                color: var(--text-primary);
+            }
+
+            .carousel-dots {
+                display: flex;
+                gap: 0.4rem;
+
+                .dot {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: var(--border-color-strong);
+                    cursor: pointer;
+                    transition: background 0.2s ease, transform 0.2s ease;
+
+                    &.active {
+                        background: var(--color-1);
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+
+        // Hide desktop tabs on mobile
         .tabs {
             width: 100%;
+
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
         }
 
         .tabs-track {
