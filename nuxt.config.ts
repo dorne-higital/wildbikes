@@ -22,6 +22,22 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  // Pre-render every page to static HTML at build time, so visitors never hit the
+  // Storyblok API. A Storyblok publish webhook triggers a Netlify rebuild.
+  // server/api routes (e.g. send-email) still deploy as Netlify functions.
+  routeRules: {
+    "/**": { prerender: true },
+    "/api/**": { prerender: false },
+  },
+
+  nitro: {
+    prerender: {
+      // start at the homepage and follow the nav/footer links to find every page
+      crawlLinks: true,
+      routes: ["/"],
+    },
+  },
+
   devServer: {
     https: true,
   },
