@@ -17,9 +17,13 @@ const slug = computed(() =>
     : 'home'
 )
 
+// Draft only inside the Storyblok Visual Editor (it adds ?_storyblok=...);
+// public visitors get published content, which Storyblok can serve from its CDN cache
+const version = route.query._storyblok ? 'draft' : 'published'
+
 // Fetch Storyblok content
 const { story } = await useAsyncStoryblok(slug.value, {
-  api: { version: 'draft' },
+  api: { version },
   bridge: {},
 })
 

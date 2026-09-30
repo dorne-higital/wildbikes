@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     apiOptions: {
       /** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
       region: process.env.STORYBLOK_REGION || "eu",
+      /** SDK default is 10 retries at a fixed 300ms on 429s, which multiplies usage when rate limited */
+      maxRetries: 2,
       /** The following code is only required when creating a Storyblok space directly via the Blueprints feature. */
       endpoint: process.env.STORYBLOK_API_BASE_URL
         ? `${new URL(process.env.STORYBLOK_API_BASE_URL).origin}/v2`

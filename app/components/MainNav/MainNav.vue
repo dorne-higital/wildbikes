@@ -64,23 +64,7 @@
 
 <script setup lang="ts">
     import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
-    import type { ISbLink } from 'storyblok-js-client'
-
-    const storyblokApi = useStoryblokApi()
-
-    const { data } = await useAsyncData('sb-links', async () => {
-        return await storyblokApi.get('cdn/links', {
-            version: 'published'
-        })
-    })
-
-    const links = computed<ISbLink[]>(() => {
-        const linksObj = data.value?.data?.links ?? {}
-
-        return Object.values(linksObj)
-            .filter((link) => !link.is_folder)
-            .sort((a, b) => (a.position ?? 0) - (b.position ?? 0))
-    })
+    const links = await useSiteLinks()
 
     const props = withDefaults(
       defineProps<{ blok: any; componentName?: string }>(),
